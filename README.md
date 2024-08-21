@@ -7,9 +7,11 @@ An Excercise Flutter project.
 A POS (Point of Sales) application for laundry business.
 
 Features:
-Transaction Management
+Order Management
     -manage incoming, doing, completed, retrieved transaction
     -invoice
+Transaction Management
+    -manage transaction
 Laundry management
     -manage laundry each types
 Employee management

@@ -1,4 +1,6 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
+import 'package:sigma_laundry/config/enums/laundry_category.dart';
+
 class Laundry {
   final String laundryId;
   final LaundryCategory laundryCategory;
@@ -17,11 +19,3 @@ class Laundry {
   });
 }
 
-enum LaundryCategory{
-  clothes("Pakaian"),
-  sheet("Sprei"),
-  blanket("Selimut");
-
-  final String name;
-  const LaundryCategory(this.name);
-} 

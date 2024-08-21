@@ -1,36 +1,19 @@
-import 'laundry.dart';
+// ignore_for_file: public_member_api_docs, sort_constructors_first
+import 'package:sigma_laundry/config/enums/payment_method.dart';
+import 'package:sigma_laundry/core/domain/entity/order.dart';
 
 class Transaction {
-
   final String transactionId;
-  final String customerName;
-  final String customerPhoneNumber;
-  final DateTime laundryDate;
-  final DateTime? laundryCompleteDate;
-  final DateTime? laundryRetrieveDate;
-  final double totalPrice;
-  final LaundryStatus status;
-  final List<Laundry> laundries;
-  
+  final DateTime transactionDate;
+  final Order order;
+  final int price;
+  final PaymentMethod paymentMethod;
+
   Transaction({
     required this.transactionId,
-    required this.customerName,
-    required this.customerPhoneNumber,
-    required this.laundryDate,
-    this.laundryCompleteDate,
-    this.laundryRetrieveDate,
-    required this.totalPrice,
-    required this.status,
-    required this.laundries,
+    required this.transactionDate,
+    required this.order,
+    required this.price,
+    required this.paymentMethod,
   });
-}
-
-enum LaundryStatus{
-  received("Diterima"),
-  doing("Dikerjakan"),
-  completed("Selesai"),
-  retrieved("Sudah diambil");
-
-  final String name;
-  const LaundryStatus(this.name);
 }
