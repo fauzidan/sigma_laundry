@@ -6,7 +6,7 @@ class TransactionModel extends Transaction {
   TransactionModel({
     required super.transactionId,
     required super.transactionDate,
-    required super.order,
+    required super.orderId,
     required super.price,
     required super.paymentMethod,
   });
@@ -23,7 +23,7 @@ class TransactionModel extends Transaction {
     return TransactionModel(
       transactionId: json['transactionId'],
       transactionDate: json['transactionDate'],
-      order: json['order'],
+      orderId: json['orderId'],
       price: json['price'],
       paymentMethod: json['paymentMethod'],
     );
@@ -33,7 +33,7 @@ class TransactionModel extends Transaction {
     return {
       'transactionId': transactionId,
       'transactionDate': transactionDate,
-      'order': order,
+      'orderId': orderId,
       'price': price,
       'paymentMethod': paymentMethod,
     };

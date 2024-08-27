@@ -5,14 +5,14 @@ import 'package:sigma_laundry/core/domain/entity/order.dart';
 class Transaction {
   final String transactionId;
   final DateTime transactionDate;
-  final Order order;
+  final String orderId;
   final int price;
   final PaymentMethod paymentMethod;
 
   Transaction({
     required this.transactionId,
     required this.transactionDate,
-    required this.order,
+    required this.orderId,
     required this.price,
     required this.paymentMethod,
   });

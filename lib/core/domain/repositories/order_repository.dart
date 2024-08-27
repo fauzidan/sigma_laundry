@@ -6,6 +6,10 @@ abstract interface class OrderRepository {
     required Order order,
   });
 
+  Future<Result<Order>> getOrder({
+    required String orderId
+  });
+
   Future<Result<List<Order>>> searchOrder({
     required String name,
   });
