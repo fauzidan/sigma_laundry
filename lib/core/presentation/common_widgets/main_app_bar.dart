@@ -16,10 +16,14 @@ class MainAppBar extends StatelessWidget implements PreferredSizeWidget {
       title: appBarTitle,
       centerTitle: true,
       leading: !isHomePage
-          ? IconButton(onPressed: () {}, icon: const Icon(Icons.home_filled))
+          ? IconButton(
+              onPressed: () {},
+              icon: const Icon(
+                Icons.arrow_back_sharp,
+              ),
+            )
           : null,
       elevation: 1,
-      
     );
   }
 

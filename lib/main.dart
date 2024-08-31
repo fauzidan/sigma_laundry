@@ -21,8 +21,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Sigma Laundry Flutter',
       theme: brightness == Brightness.light ? theme.light() : theme.dark(),
-      home: const HomePage
-      (),
+      home: const LaundryPage(),
     );
   }
 }
