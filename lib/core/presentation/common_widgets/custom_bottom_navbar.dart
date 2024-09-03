@@ -29,7 +29,7 @@ class CustomBottomNavBar extends StatelessWidget {
       width: double.infinity,
       height: 70,
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: navbarItems
             .map(
               (e) => GestureDetector(

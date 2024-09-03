@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:sigma_laundry/config/enums/laundry_status.dart';
 import 'package:sigma_laundry/config/extension/theme_extension.dart';
+import 'package:sigma_laundry/core/domain/entity/order.dart';
 import 'package:sigma_laundry/core/presentation/common_widgets/custom_bottom_navbar.dart';
 import 'package:sigma_laundry/core/presentation/common_widgets/custom_bottom_navbar_item.dart';
 import 'package:sigma_laundry/core/presentation/common_widgets/main_app_bar.dart';
-import 'package:sigma_laundry/core/presentation/misc/spaces.dart';
-import 'package:sigma_laundry/core/presentation/pages/laundry_page/sub_pages/laundry_received_page/laundry_received_page.dart';
+import 'package:sigma_laundry/core/presentation/pages/laundry_page/widgets/order_list_view.dart';
 
 class LaundryPage extends StatefulWidget {
   const LaundryPage({super.key});
@@ -67,13 +68,58 @@ class _LaundryPageState extends State<LaundryPage> {
         ),
         children: [
           Center(
-            child: const LaundryReceivedPage(),
+            child: OrderListView(
+              orders: [
+                Order(
+                  orderId: '121212',
+                  customerName: 'Anak Kost',
+                  customerPhoneNumber: '081234567890',
+                  laundryReceivedDate: DateTime(2022),
+                  totalPrice: 55000,
+                  laundryStatus: LaundryStatus.received,
+                  laundries: [],
+                ),
+              ],
+            ),
           ),
           Center(
-            child: Text('Page2'),
+            child: OrderListView(
+              orders: [
+                Order(
+                  orderId: '2121212',
+                  customerName: 'Pengangguran',
+                  customerPhoneNumber: '098765432120',
+                  laundryReceivedDate: DateTime(2021),
+                  totalPrice: 5000,
+                  laundryStatus: LaundryStatus.doing,
+                  laundries: [],
+                ),
+                Order(
+                  orderId: '2121212',
+                  customerName: 'Pengangguran',
+                  customerPhoneNumber: '098765432120',
+                  laundryReceivedDate: DateTime(2021),
+                  totalPrice: 5000,
+                  laundryStatus: LaundryStatus.doing,
+                  laundries: [],
+                ),
+              ],
+            ),
           ),
           Center(
-            child: Text('Page3'),
+            child: OrderListView(
+              orders: [
+                Order(
+                  orderId: '555555',
+                  customerName: 'negalogia',
+                  customerPhoneNumber: '08921232123423',
+                  laundryReceivedDate: DateTime(2019),
+                  totalPrice: 34000,
+                  laundryStatus: LaundryStatus.completed,
+                  laundries: [],
+                ),
+              ],
+            ),
           ),
         ],
       ),

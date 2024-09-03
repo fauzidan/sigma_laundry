@@ -1,9 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:sigma_laundry/config/extension/color_extension.dart';
 import 'package:sigma_laundry/config/extension/theme_extension.dart';
+import 'package:sigma_laundry/core/domain/entity/order.dart';
 import 'package:sigma_laundry/core/presentation/misc/spaces.dart';
 
 class OrderTile extends StatelessWidget {
-  const OrderTile({super.key});
+  const OrderTile({
+    super.key,
+    required this.order,
+  });
+
+  final Order order;
 
   @override
   Widget build(BuildContext context) {
@@ -20,29 +27,35 @@ class OrderTile extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  '{{NAMA}}',
+                  order.customerName,
                   style: context.textTheme.bodyLarge,
                 ),
                 Row(
                   children: [
-                    Text('{{HARGA}}'),
-                    horizontalSpace(4),
+                    Text(order.totalPrice.toString()),
+                    horizontalSpace(8),
                     Container(
                       padding: const EdgeInsets.all(4),
                       decoration: BoxDecoration(
-                        color: Colors.red.shade300,
+                        color: order.laundryStatus.color.lighten(60),
                         borderRadius: const BorderRadius.all(
                           Radius.circular(8),
                         ),
                       ),
-                      child: Text('{{STATUS}}'),
+                      child: Text(
+                        order.laundryStatus.name,
+                        style: context.textTheme.labelLarge!.copyWith(
+                          color: order.laundryStatus.color.darken(35),
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
                     )
                   ],
                 ),
               ],
             ),
             const Spacer(),
-            Text('{{WAKTU}}')
+            Text(order.laundryReceivedDate.toString())
           ],
         ),
       ),

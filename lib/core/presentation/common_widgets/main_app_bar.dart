@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sigma_laundry/config/extension/theme_extension.dart';
 
 class MainAppBar extends StatelessWidget implements PreferredSizeWidget {
   const MainAppBar({
@@ -23,7 +24,12 @@ class MainAppBar extends StatelessWidget implements PreferredSizeWidget {
               ),
             )
           : null,
-      elevation: 1,
+      shape: Border(
+        bottom: BorderSide(
+          color: context.colorScheme.onSurface,
+          width: 0.2,
+        ),
+      ),
     );
   }
 
