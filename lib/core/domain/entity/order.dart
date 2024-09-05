@@ -9,7 +9,7 @@ class Order {
   final DateTime laundryReceivedDate;
   final DateTime? laundryCompleteDate;
   final DateTime? laundryRetrieveDate;
-  final double totalPrice;
+  final int totalPrice;
   final LaundryStatus laundryStatus;
   final List<Laundry> laundries;
   
