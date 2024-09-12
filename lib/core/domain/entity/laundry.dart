@@ -5,7 +5,7 @@ class Laundry {
   final String laundryId;
   final LaundryCategory laundryCategory;
   final bool isIroning;
-  final double price;
+  final int price;
   final int? amount;
   final double? weight;
 

@@ -14,12 +14,23 @@ class DetailsTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(8),
+      padding: const EdgeInsets.symmetric(
+        horizontal: 16,
+        vertical: 8,
+      ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Text(title),
-          Text(data, style: context.textTheme.bodyLarge,),
+          Text(
+            title,
+            style: context.textTheme.titleSmall!.copyWith(
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          Text(
+            data,
+            style: context.textTheme.bodyLarge!.copyWith(),
+          ),
         ],
       ),
     );

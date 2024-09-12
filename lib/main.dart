@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:sigma_laundry/config/app/theme.dart';
 import 'package:sigma_laundry/config/app/util.dart';
+import 'package:sigma_laundry/core/presentation/pages/laundry_add_page/laundry_add_page.dart';
 import 'package:sigma_laundry/core/presentation/pages/laundry_details_page/laundry_details_page.dart';
+import 'package:sigma_laundry/core/presentation/pages/laundry_page/laundry_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,7 +22,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Sigma Laundry Flutter',
       theme: brightness == Brightness.light ? theme.light() : theme.dark(),
-      home: const LaundryDetailsPage(),
+      home: const LaundryAddPage(),
     );
   }
 }
