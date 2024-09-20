@@ -38,7 +38,7 @@ class LaundryAddTextfield extends StatelessWidget {
             decoration: InputDecoration(
               focusedBorder: OutlineInputBorder(
                 borderSide: BorderSide(
-                  color: context.colorScheme.primary,
+                  color: context.colorScheme.tertiary,
                   width: 2,
                 ),
               ),

@@ -16,7 +16,7 @@ class LaundryTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      color: context.colorScheme.tertiaryContainer,
+      color: context.colorScheme.secondaryContainer,
       child: Padding(
         padding: const EdgeInsets.all(16),
         child: Row(
@@ -49,7 +49,7 @@ class LaundryTile extends StatelessWidget {
                           )
                         else
                           Text(
-                            laundry.amount.toString(),
+                            '${laundry.amount.toString()} buah',
                             style: context.textTheme.titleMedium!.copyWith(
                               color: context.colorScheme.onTertiaryContainer,
                             ),

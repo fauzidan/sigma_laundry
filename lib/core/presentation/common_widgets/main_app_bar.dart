@@ -15,7 +15,7 @@ class MainAppBar extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     return AppBar(
       title: appBarTitle,
-      centerTitle: true,
+      surfaceTintColor: null,
       leading: !isHomePage
           ? IconButton(
               onPressed: () {},

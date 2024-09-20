@@ -22,7 +22,7 @@ class _LaundryPageState extends State<LaundryPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const MainAppBar(
-        appBarTitle: const Text('Laundry'),
+        appBarTitle: Text('Laundry'),
         isHomePage: false,
       ),
       bottomNavigationBar: CustomBottomNavBar(
